@@ -1,8 +1,12 @@
 
-# Virtual Sparse Convolution for Multimodal 3D Object Detection
-This is a official code release of [VirConv](https://arxiv.org/abs/2303.02314) (Virtual Sparse Convolution for 3D Object Detection). 
+# Modified version of Virtual Sparse Convolution for Multimodal 3D Object Detection
+This is a modified code release of [VirConv](https://arxiv.org/abs/2303.02314) (Virtual Sparse Convolution for 3D Object Detection). 
 This code is mainly based on [OpenPCDet](https://github.com/open-mmlab/OpenPCDet), some codes are from [TED](https://github.com/hailanyi/TED), 
 [CasA](https://github.com/hailanyi/CasA), [PENet](https://github.com/JUGGHM/PENet_ICRA2021) and [SFD](https://github.com/LittlePey/SFD).
+
+The lists in the list_dirs should be sorted to get the desired dataset, so I have modified creat_semi_dataset.py based on the original code. 
+The code on the original git has something wrong with my environment because the selection process of the creat_semi_dataset file had not been sorted. 
+**If you run the code on this git, you could get the same semi-dataset as the original version of VirConv. **
 
 ## Detection Framework
 * VirConv-L: A light-weight multimodal 3D detector based on Virtual Sparse Convolution.
