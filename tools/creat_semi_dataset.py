@@ -5,10 +5,12 @@ def list_dirs(root=r'L:\data\kitti\odometry\dataset\sequences'):
     all_frames = []
 
     all_seq = os.listdir(root)
+    all_seq.sort()
     for seq_name in all_seq:
         seq_path = os.path.join(root, seq_name)
         seq_path_velodyne = os.path.join(seq_path, 'velodyne')
         all_velo_frame_name = os.listdir(seq_path_velodyne)
+        all_velo_frame_name.sort()
         seq_path_image_2 = os.path.join(seq_path, 'image_2')
         seq_path_calib = os.path.join(seq_path, 'calib.txt')
 
@@ -39,9 +41,9 @@ def move_data(input_path_dict, out_root='sampled_odometry', sampling=4):
         sampled_path.append(input_path_dict[i])
 
     os.makedirs(out_root, exist_ok=True)
-
     for i, input_frame in enumerate( sampled_path):
         print(i,'/',len(sampled_path))
+
         name = str(i).zfill(6)
         in_velo_path = input_frame['velo_path']
         in_im_path = input_frame['im_path']
