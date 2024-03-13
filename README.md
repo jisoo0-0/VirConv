@@ -6,7 +6,8 @@ This code is mainly based on [OpenPCDet](https://github.com/open-mmlab/OpenPCDet
 
 The lists in the list_dirs should be sorted to get the desired dataset, so I have modified creat_semi_dataset.py based on the original code. 
 The code on the original git has something wrong with my environment because the selection process of the creat_semi_dataset file had not been sorted. 
-###If you run the code on this git, you could get the same semi-dataset as the original version of VirConv. 
+
+### If you run the code on this git, you could get the same semi-dataset as the original version of VirConv. 
 
 ## Detection Framework
 * VirConv-L: A light-weight multimodal 3D detector based on Virtual Sparse Convolution.
